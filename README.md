@@ -8,7 +8,7 @@ which is currently under review but is on Bioarxiv here:
 
 TODO
 
-If you use the code/model, please cite the above paper. If you use the data (to be posted on CRCNS), please cite the above paper and TODO. If you have questions or comments, please email patrick-lawlor@northwestern.edu
+If you use the code/model, please cite the above paper. If you use the data (to be posted on CRCNS), please cite the above paper and TODO. If you have questions or comments, please email patrick *hyphen* lawlor *at* northwestern *dot* edu
 
 ***
 ### Overview
