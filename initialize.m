@@ -14,6 +14,11 @@ end
 % More user input
 trim_times = [0.4, 0.2]; % The size of the time window to use, in seconds. Default [0.4, 0.2] which is 400ms before and 200ms after reach start.
 
+% Check if save folder(s) exist. If not, create them
+if exist(Results_fpath,'dir') == 7
+    mkdir(Results_fpath);
+end
+
 % File name for saving
 Results_fname = [Results_fname_base '_' datetimestr];
 
