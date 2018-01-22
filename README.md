@@ -4,11 +4,9 @@ This repository contains code and sample data related to the following manuscrip
 
 Lawlor P.N., Perich, M.G., Miller, L.E., & Kording, K.P. *Linear-Nonlinear-Time-Warp-Poisson models of neural activity*
 
-which is currently under review but is on Bioarxiv here:
+It is currently under review but is on [Bioarxiv](https://www.biorxiv.org/content/early/2018/01/22/194498).
 
-TODO
-
-If you use the code/model, please cite the above paper. If you use the data (to be posted on CRCNS), please cite the above paper and TODO. If you have questions or comments, please email patrick *hyphen* lawlor *at* northwestern *dot* edu
+If you use the code/model, please cite the above paper. The data will eventually be posted on CRCNS. If you have questions or comments, please email patrick *hyphen* lawlor *at* northwestern *dot* edu
 
 ***
 ### Overview
