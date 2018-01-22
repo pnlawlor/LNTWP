@@ -117,9 +117,9 @@ fit_model
 % Example trials
 % Trials 28, 154, 276, and 315 are used for Fig 7 in the manuscript
 
-trs = [28, 154, 315, 276];
+trs = [28, 154, 276, 315];
 
-reach_dir = [-4:4]*pi/8; % Use this to limit reaches to those towards a particular direction. Default is to use all reaches.
+reach_dir = [-7:2:7]*pi/8; % Use this to limit reaches to those towards a particular direction. Default is to use all reaches.
 
 % Automatic iteration choosing
 last_iter = find(~isnan(LLHD_mean),1,'last'); % Get last iteration number
