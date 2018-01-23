@@ -15,7 +15,7 @@ end
 trim_times = [0.4, 0.2]; % The size of the time window to use, in seconds. Default [0.4, 0.2] which is 400ms before and 200ms after reach start.
 
 % Check if save folder(s) exist. If not, create them
-if ~exist(Results_fpath,'dir') == 7
+if ~(exist(Results_fpath,'dir') == 7)
     mkdir(Results_fpath);
 end
 
@@ -38,21 +38,21 @@ spikes_all = spikes_all_preselect(:,good_nrn); % NB: This uses spikes for the go
 % Choose the right neurons
 if size(spikes_all,2) > num_nrn_desired % If you desire fewer neurons than provided
     nrn_to_use = randsample(sum(good_nrn),num_nrn_desired);
-    
+
     % Keep track of original indices of neurons (mostly for simulation purposes)
     good_nrn_orig_idx = find(good_nrn);
     nrn_to_use_orig_idx = good_nrn_orig_idx(nrn_to_use);
-    
+
     spikes_all = spikes_all(:,nrn_to_use);
     neurons = 1:size(spikes_all,2);
-    
+
 elseif size(spikes_all,2) == num_nrn_desired % If you've requested exactly the right number of neurons
     neurons = 1:size(spikes_all,2);
-    
+
 elseif size(spikes_all,2) < num_nrn_desired % If you've requested too many neurons
     neurons = 1:size(spikes_all,2);
     disp(['You have requested more neurons than you have available in this dataset. Using ' num2str(length(neurons)) ' instead.'])
-    
+
 end
 
 num_nrn_max = size(spikes_all,2);
@@ -60,7 +60,7 @@ num_nrn_max = size(spikes_all,2);
 disp(['Using ' num2str(size(spikes_all,2)) '/' num2str(size(Data_win.spikes_PMd,2)) ' neurons, FR threshold: ' num2str(round(FR_thresh/dt)) ' Hz'])
 
 % Add extra iterations for model with spike history terms. I just store
-% this as an extra iteration of the alternation. 
+% this as an extra iteration of the alternation.
 max_iter = max_iter + include_spk_history;
 
 if include_spk_history
