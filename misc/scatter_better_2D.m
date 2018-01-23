@@ -3,7 +3,7 @@ function [ ] = scatter_better_2D( x, EB_x, y, EB_y, ax, color )
 % Initialization
 num_dp = size(x,1);
 
-% figure
+figure
 
 % Draw EB lines first
 for dp = 1:num_dp
